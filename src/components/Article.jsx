@@ -1,4 +1,4 @@
-export default function Article({ article }) {
+export default function Article({ article, onEdit, onDelete }) {
   return (
     <article>
       {!article ? (
@@ -6,8 +6,13 @@ export default function Article({ article }) {
       ) : (
         <section>
           <h2>{article.title}</h2>
-          <p className="date">{`Posted: ${article.date}`}</p>
+          {article.author && <p className="author">By: {article.author}</p>}
+          <p className="date">{`Posted: ${article.date.toLocaleDateString()}`}</p>
           <p className="body">{article.body}</p>
+          <div className="actions">
+            <button onClick={onEdit}>Edit</button>
+            <button onClick={() => onDelete(article.id)}>Delete</button>
+          </div>
         </section>
       )}
     </article>
