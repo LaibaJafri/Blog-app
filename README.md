@@ -2,11 +2,10 @@
 
 This project is a blog application that was originally built using Firebase Firestore but has now been fully migrated to MongoDB. The app includes full CRUD functionality, improved UI, and backend enhancements to support a better developer and user experience.
 
-## 🚀 Overview
+##  Overview
+This features a backend developed with **Express.js**, where I implemented **RESTful API** endpoints to manage article data stored in **MongoDB**. The backend supports full **CRUD functionality**, including `GET` requests to retrieve all articles, `POST` requests to create new entries, `PUT` requests to update existing articles, and `DELETE` requests to remove articles by their unique ID. On the frontend, built using **React**, I integrated these APIs with functions like `fetchArticles()`, `createArticle()`, `updateArticle()`, and `deleteArticle()`. These handle data fetching and user interactions, allowing dynamic article creation, editing, and deletion directly from the interface. The setup ensures smooth client-server communication and real-time UI updates based on user actions.
 
-The backend has been transitioned from Firebase to **MongoDB Atlas** using the native MongoDB Node.js driver. This change improves scalability, flexibility, and control over data handling.
-
-## 🔧 Key Changes
+##  Key Changes
 
 ### 1. Backend Overhaul
 
@@ -33,7 +32,6 @@ RESTful API for blog articles:
 
 ### Install Dependencies
 
-```bash
 npm install express mongodb cors body-parser
 
 Make sure your MongoDB URI is set in your backend. This project uses:
@@ -44,13 +42,12 @@ replace it in server.js
 
 ### Start the Server
 
-```bash
 node server.js
 
 ## 3. Frontend Setup
 
 ### 📦 Install Frontend Dependencies
-```bash
+
 cd client
 npm install
 
